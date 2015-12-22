@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangke.pub/"/>
-  <updated>2015-12-09T11:47:52.000Z</updated>
+  <updated>2015-12-22T17:48:02.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
@@ -13,6 +13,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[yum install iftop ]]></title>
+    <link href="http://zhangke.pub/2015/12/23/yum-install-iftop/"/>
+    <id>http://zhangke.pub/2015/12/23/yum-install-iftop/</id>
+    <published>2015-12-22T17:30:01.000Z</published>
+    <updated>2015-12-22T17:48:02.000Z</updated>
+    <content type="html"><![CDATA[<p>最近搞了个萌宝投票活动，网站流量较大，也不知道该加多少带宽。<br>提了个工单，说是看<a href="https://help.aliyun.com/knowledge_detail/6571620.html?spm=5176.7618386.5.1.jlj0lN" target="_blank" rel="external">这里</a>。结果 iftop 硬是装不上，<code>No package iftop available.</code> = =!。<br>尝试下载 rpm 包，发现各种依赖。只能不停 google, 发现有个关键字 <strong>epel</strong>，突然想到以前装 tensorflow 的时候好像有这么个的东西。先跑个 <code>yum install epel-release.noarc</code>, 再来 <code>yum install iftop</code>，成功了。<br>再看看<a href="https://fedoraproject.org/wiki/EPEL" target="_blank" rel="external">资料</a>，丫的是个扩展源。。。明早起来继续监控流量。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近搞了个萌宝投票活动，网站流量较大，也不知道该加多少带宽。<br>提了个工单，说是看<a href="https://help.aliyun.com/knowledge_detail/6571620.html?spm=5176.7618386.5.1.jlj0lN" ta]]>
+    </summary>
+    
+      <category term="yum iftop" scheme="http://zhangke.pub/tags/yum-iftop/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Selenium-12306购票]]></title>
