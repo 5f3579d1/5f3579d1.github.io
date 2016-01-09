@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangke.pub/"/>
-  <updated>2015-12-22T17:48:02.000Z</updated>
+  <updated>2016-01-09T02:53:00.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
@@ -13,6 +13,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[197. Rising Temperature]]></title>
+    <link href="http://zhangke.pub/2016/01/09/197-Rising-Temperature/"/>
+    <id>http://zhangke.pub/2016/01/09/197-Rising-Temperature/</id>
+    <published>2016-01-09T02:44:55.000Z</published>
+    <updated>2016-01-09T02:53:00.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.com/problems/rising-temperature/" target="_blank" rel="external">Question</a></p>
+<h2 id="Initalization"><a href="#Initalization" class="headerlink" title="Initalization"></a>Initalization</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table Weather if exists Weather;&#10;&#10;create table Weather (&#10;&#9;`Id` int (1) primary key auto_increment,&#10;&#9;`Date` date,&#10;&#9;`Temperature` int(3)&#10;);&#10;&#10;insert into Weather (`Date`, Temperature) values&#10;  (&#39;2015-01-01&#39;, 10),&#10;  (&#39;2015-01-02&#39;, 25),&#10;  (&#39;2015-01-03&#39;, 20),&#10;  (&#39;2015-01-04&#39;, 30);</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below&#10;select today.Id&#10;from Weather yesterday join Weather today on DATE_ADD(yesterday.Date, INTERVAL 1 DAY) = today.Date&#10;where yesterday.Temperature &#60; today.Temperature;</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://leetcode.com/problems/rising-temperature/" target="_blank" rel="external">Question</a></p>
+<h2 id="Initalization"><a hre]]>
+    </summary>
+    
+      <category term="leetcode database" scheme="http://zhangke.pub/tags/leetcode-database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[262.trips and users]]></title>
+    <link href="http://zhangke.pub/2016/01/09/262-trips-and-users/"/>
+    <id>http://zhangke.pub/2016/01/09/262-trips-and-users/</id>
+    <published>2016-01-08T17:13:16.000Z</published>
+    <updated>2016-01-09T02:51:22.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://leetcode.com/problems/trips-and-users" target="_blank" rel="external">Question</a></p>
+<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE IF EXISTS `Trips`;&#10;&#10;CREATE TABLE `Trips` (&#10;  `Id` int(3) NOT NULL AUTO_INCREMENT,&#10;  `Client_Id` int(3) DEFAULT NULL,&#10;  `Driver_Id` int(3) DEFAULT NULL,&#10;  `City_Id` int(3) DEFAULT NULL,&#10;  `Status` varchar(32) DEFAULT NULL,&#10;  `Request_at` date DEFAULT NULL,&#10;  PRIMARY KEY (`Id`)&#10;) ENGINE=InnoDB DEFAULT CHARSET=latin1;&#10;&#10;INSERT INTO `Trips` (`Id`, `Client_Id`, `Driver_Id`, `City_Id`, `Status`, `Request_at`)&#10;VALUES&#10;&#9;(1,1,11,1,&#39;completed&#39;,&#39;2013-10-01&#39;),&#10;&#9;(2,2,12,6,&#39;cancelled_by_driver&#39;,&#39;2013-10-01&#39;),&#10;&#9;(3,3,13,6,&#39;completed&#39;,&#39;2013-10-01&#39;),&#10;&#9;(4,4,10,1,&#39;cancelled_by_client&#39;,&#39;2013-10-01&#39;),&#10;&#9;(5,1,11,6,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(6,2,12,6,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(7,3,12,12,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(8,2,10,12,&#39;completed&#39;,&#39;2013-10-03&#39;),&#10;&#9;(9,3,10,12,&#39;completed&#39;,&#39;2013-10-03&#39;),&#10;&#9;(10,4,13,12,&#39;cancelled_by_driver&#39;,&#39;2013-10-03&#39;);&#10;&#10;DROP TABLE IF EXISTS `Users`;&#10;&#10;CREATE TABLE `Users` (&#10;  `Users_Id` int(3) NOT NULL AUTO_INCREMENT,&#10;  `Banned` varchar(32) DEFAULT NULL,&#10;  `Role` varchar(32) DEFAULT NULL,&#10;  PRIMARY KEY (`Users_Id`)&#10;) ENGINE=InnoDB DEFAULT CHARSET=latin1;&#10;&#10;LOCK TABLES `users` WRITE;&#10;&#10;INSERT INTO `Users` (`Users_Id`, `Banned`, `Role`)&#10;VALUES&#10;&#9;(1,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(2,&#39;YES&#39;,&#39;client&#39;),&#10;&#9;(3,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(4,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(10,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(11,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(12,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(13,&#39;NO&#39;,&#39;driver&#39;);</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;# Write your MySQL query statement below&#10;select total.day as &#39;Day&#39;, ROUND(IFNULL(cancelled.count,0)/total.count, 2) &#39;Cancellation Rate&#39;&#10;from&#10;&#10;(&#10;select t.Request_at as day , count(*) as count&#10;from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id&#10;where c.Banned = &#39;No&#39; and d.Banned = &#39;No&#39; and t.status != &#39;completed&#39; and t.Request_at between &#39;2013-10-01&#39; and &#39;2013-10-03&#39;&#10;group by t.Request_at&#10;) cancelled&#10;&#10;right join&#10;&#10;(&#10;select t.Request_at as day, count(*) as count&#10; from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id&#10; where  c.Banned = &#39;No&#39; and d.Banned = &#39;No&#39; and t.Request_at between &#39;2013-10-01&#39; and &#39;2013-10-03&#39;&#10; group by t.Request_at&#10;) total&#10;&#10;on cancelled.day = total.day&#10;&#10;group by total.day;</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="https://leetcode.com/problems/trips-and-users" target="_blank" rel="external">Question</a></p>
+<h2 id="Initialization"><a href="]]>
+    </summary>
+    
+      <category term="leetcode database" scheme="http://zhangke.pub/tags/leetcode-database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[nginx cache]]></title>
+    <link href="http://zhangke.pub/2015/12/23/nginx-cache/"/>
+    <id>http://zhangke.pub/2015/12/23/nginx-cache/</id>
+    <published>2015-12-23T15:02:15.000Z</published>
+    <updated>2015-12-23T16:17:31.000Z</updated>
+    <content type="html"><![CDATA[<p>刚开始做网站的时候总想禁用缓存，每次系统更新，用户那边总是会有延迟，老让用户重启微信或者强刷浏览器体验太差了，后来用上了 gulp，缓存这个问题算是解决了。<br>我们网站以图片展示为主，页面显示效果不好，图片乱序加载，耗时长。先是引入了懒加载，能尽可能将当前的图片显示出来，但是图片加载时间还是没减少。该怎样减少加载时间？CDN，或者直接加带宽，这都不被成本给限制了。那这个图片是不是该缓存下来，至少第二次访问能体验能好很多，这个图片本来就是用户上传的，固定的，每个链接就唯一的图，它是不会变的，本来就该本缓存起来。<br>于是看人家是怎么实现的，都是用 http header 如 Last-Modified, ETag 控制的 </p>
+<p>location ~ .* {<br>    if ($request_uri ~ ^/imgres) {<br>        expires max;<br>    }<br>    proxy_pass <a href="http://wetime" target="_blank" rel="external">http://wetime</a>;<br>    proxy_set_header X-Real-IP $remote_addr;<br>}</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>刚开始做网站的时候总想禁用缓存，每次系统更新，用户那边总是会有延迟，老让用户重启微信或者强刷浏览器体验太差了，后来用上了 gulp，缓存这个问题算是解决了。<br>我们网站以图片展示为主，页面显示效果不好，图片乱序加载，耗时长。先是引入了懒加载，能尽可能将当前的图片显示出来]]>
+    </summary>
+    
+      <category term="nginx cache" scheme="http://zhangke.pub/tags/nginx-cache/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[yum install iftop ]]></title>

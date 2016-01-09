@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhangke.pub/2016/01/09/197-Rising-Temperature/</loc>
+    <lastmod>2016-01-09T02:53:00.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangke.pub/2016/01/09/262-trips-and-users/</loc>
+    <lastmod>2016-01-09T02:51:22.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://zhangke.pub/2015/12/23/nginx-cache/</loc>
+    <lastmod>2015-12-23T16:17:31.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://zhangke.pub/2015/12/23/yum-install-iftop/</loc>
     <lastmod>2015-12-22T17:48:02.000Z</lastmod>
   </url>
