@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangke.pub/"/>
-  <updated>2016-01-09T02:53:00.000Z</updated>
+  <updated>2016-01-28T06:17:51.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
@@ -13,6 +13,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[my key]]></title>
+    <link href="http://zhangke.pub/2016/01/28/my-key/"/>
+    <id>http://zhangke.pub/2016/01/28/my-key/</id>
+    <published>2016-01-28T06:16:11.000Z</published>
+    <updated>2016-01-28T06:17:51.000Z</updated>
+    <content type="html"><![CDATA[<p>—–BEGIN PGP PUBLIC KEY BLOCK—–<br>Version: GnuPG v2</p>
+<p>mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL<br>8qXm2C7LN4FuNANaybFqDBStOwEgE2iPgfuHiIuKxk3BebGTmfQmLCis4hbXXJer<br>U2X2e1Fj3EPTaS9BoWuuJMmDYYFscHqREjLrNc4qEEc5hCeOZ5pNu3eVN5Xe9nif<br>7mSft1HVvQ7/vIa5VetxDRt733W2S14F9VlwgOrZ8A/lRLks0k31k4YxQFQzSoOj<br>LoZhp7MiwfN3nZojDjBK9TJt5JtETQMWptwcp39HVbg6kIZ1OvK/bqdM0cy3Mys8<br>tMrUl7aevlpHr6dhWNZrRBz6k5dhhgGYqe9vABEBAAG0HktlIENoZXVuZyA8NWYz<br>NTc5ZDFAZ21haWwuY29tPokBPQQTAQIAKAUCVqbl6gIbAwUJAeEzgAYLCQgHAwIG<br>FQgCCQoLBBYCAwECHgECF4AACgkQtT4unSv1GdEEggf4xW6q8QIWE9o6bsNIxfG8<br>W4kFmknVpuq/6oVR+7lQNxY9shE4tFFzmR9tGZBB0PscDD3ydAQeKjcwXRAKehva<br>39SiVl8cTnoSH/h9Pg+/8jHt3f0WSCB2GT1d+bAv0FmBQoM6QEsKpZ/fxT1zXFG8<br>NWYdXmkQ7LxrOKvoX987wKxekLe57tlb50oDnWVg4eRcN7CZ23rj/y8wL6yx2If/<br>5AebYWdKEP+tQWVmniLh+HaZSrYG/Txen7BBZQrDnBQwGmoWMXm0Ws/gaGEJDLOp<br>3e8h275ojQJbzThbndYvl+yUGG0vfMG8cA0K/FKZS2nKDzL9nHnhSVXrqTSRx/P2<br>uQENBFam5eoBCAD8wJdL24H3oh8YJMKnvrUC3SaDuK37I9dZJCoVWw1l19s7evBM<br>uvc6jGlN01XdEdglNUmJTN3SuvTGbKN/8DZKl9Of+U2B1UqUpeeSlEG77NpdoGD9<br>VnhRVusIFSGD88fmgtpuulILnzm4N/hpOm8wUY553SASHmRe6i6Tur8qwLgCUyW3<br>UOgxXHVwQ/GWfzJd05SJhN7wgTCu7BPy7jJMOlII+TYErQNhPNU48yUWM41302z5<br>3OAC91of6B8hyasLW4/e0uDhyta4JjxBlwVJsiECwoNi9JxKDJZ64q2oeeroL/OL<br>M/RJYCdt0VbX2zVIvb3Ogijhx52OJlBN8sdxABEBAAGJASUEGAECAA8FAlam5eoC<br>GwwFCQHhM4AACgkQtT4unSv1GdHRFgf/UMHDor7fwL2kujolA1ED+MZrfdizpHbk<br>+2XOnETKO5i6FNCM/PqvRedmTtOc03DCLrYKqwGt8wMbbhco60SroFbVrlLfAMOG<br>ZTXPBMASWLHhouPs/Wl5UpmbbrtNUlbhmePPyfeIye1CYxNKy6Ar4F/kjFdHGzu3<br>+ah0BX0d1i7YrMcTvrutfpHrU/ZSXcHMGw4DcKztHFeItVudzkIoqVBYGlMFMiSp<br>lQYQL6SDEnIWk/ClX1lJ8XoJlBhQzqOkDgnC/TQ2iRgEIpdaKq8OjJ7+m6N2pMJQ<br>b+5Gs7jH3moZBBqOTimKaZkKeZnLeXNSevlg3/rfjE5Wa/5URZyWOw==<br>=80VB<br>—–END PGP PUBLIC KEY BLOCK—–</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>—–BEGIN PGP PUBLIC KEY BLOCK—–<br>Version: GnuPG v2</p>
+<p>mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL<br>8qXm2C7LN4]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[197. Rising Temperature]]></title>
