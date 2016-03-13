@@ -3,21 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>my key | Hexo</title>
+  <title>casperjs-phantomjs | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—–BEGIN PGP PUBLIC KEY BLOCK—–Version: GnuPG v2
-mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL8qXm2C7LN4FuNANaybFqDBStOwEgE2iPgfuHiIuKxk3BebGTmfQmLCis4hbXXJerU2X2e1Fj3EPTaS9BoWuuJMmD">
+  <meta name="description" content="今天用 phantomjs 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。一直听说 casperjs 是基于 phantomjs (和 SlimerJS) 的封装。想想组合起来应该没什么问题。试过
+
+直接修改成 casperjs 的方法。
+casperjs 调用外部 js。
+直接将 phantomjs 的代码嵌套进去。
+
+问题都没有解决，总是和单独用 phant">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my key">
-<meta property="og:url" content="http://zhangke.pub/2016/01/28/my-key/index.html">
+<meta property="og:title" content="casperjs-phantomjs">
+<meta property="og:url" content="http://zhangke.pub/2016/03/13/casperjs-phantomjs/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="—–BEGIN PGP PUBLIC KEY BLOCK—–Version: GnuPG v2
-mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL8qXm2C7LN4FuNANaybFqDBStOwEgE2iPgfuHiIuKxk3BebGTmfQmLCis4hbXXJerU2X2e1Fj3EPTaS9BoWuuJMmD">
-<meta property="og:updated_time" content="2016-01-28T06:17:51.000Z">
+<meta property="og:description" content="今天用 phantomjs 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。一直听说 casperjs 是基于 phantomjs (和 SlimerJS) 的封装。想想组合起来应该没什么问题。试过
+
+直接修改成 casperjs 的方法。
+casperjs 调用外部 js。
+直接将 phantomjs 的代码嵌套进去。
+
+问题都没有解决，总是和单独用 phant">
+<meta property="og:updated_time" content="2016-03-13T12:31:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my key">
-<meta name="twitter:description" content="—–BEGIN PGP PUBLIC KEY BLOCK—–Version: GnuPG v2
-mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL8qXm2C7LN4FuNANaybFqDBStOwEgE2iPgfuHiIuKxk3BebGTmfQmLCis4hbXXJerU2X2e1Fj3EPTaS9BoWuuJMmD">
+<meta name="twitter:title" content="casperjs-phantomjs">
+<meta name="twitter:description" content="今天用 phantomjs 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。一直听说 casperjs 是基于 phantomjs (和 SlimerJS) 的封装。想想组合起来应该没什么问题。试过
+
+直接修改成 casperjs 的方法。
+casperjs 调用外部 js。
+直接将 phantomjs 的代码嵌套进去。
+
+问题都没有解决，总是和单独用 phant">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,10 +78,10 @@ mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL8qXm2C7LN4FuNANa
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-my-key" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-casperjs-phantomjs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/01/28/my-key/" class="article-date">
-  <time datetime="2016-01-28T06:16:11.000Z" itemprop="datePublished">2016-01-28</time>
+    <a href="/2016/03/13/casperjs-phantomjs/" class="article-date">
+  <time datetime="2016-03-13T12:09:58.000Z" itemprop="datePublished">2016-03-13</time>
 </a>
     
   </div>
@@ -77,7 +92,7 @@ mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL8qXm2C7LN4FuNANa
         
   
     <h1 class="article-title" itemprop="name">
-      my key
+      casperjs-phantomjs
     </h1>
   
 
@@ -85,34 +100,37 @@ mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL8qXm2C7LN4FuNANa
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>—–BEGIN PGP PUBLIC KEY BLOCK—–<br>Version: GnuPG v2</p>
-<p>mQENBFam5eoBCACuc2dzD1v4vBfNPyO2oB0bhl1qyOiOudazcCHHKmdXxsoLvKnL<br>8qXm2C7LN4FuNANaybFqDBStOwEgE2iPgfuHiIuKxk3BebGTmfQmLCis4hbXXJer<br>U2X2e1Fj3EPTaS9BoWuuJMmDYYFscHqREjLrNc4qEEc5hCeOZ5pNu3eVN5Xe9nif<br>7mSft1HVvQ7/vIa5VetxDRt733W2S14F9VlwgOrZ8A/lRLks0k31k4YxQFQzSoOj<br>LoZhp7MiwfN3nZojDjBK9TJt5JtETQMWptwcp39HVbg6kIZ1OvK/bqdM0cy3Mys8<br>tMrUl7aevlpHr6dhWNZrRBz6k5dhhgGYqe9vABEBAAG0HktlIENoZXVuZyA8NWYz<br>NTc5ZDFAZ21haWwuY29tPokBPQQTAQIAKAUCVqbl6gIbAwUJAeEzgAYLCQgHAwIG<br>FQgCCQoLBBYCAwECHgECF4AACgkQtT4unSv1GdEEggf4xW6q8QIWE9o6bsNIxfG8<br>W4kFmknVpuq/6oVR+7lQNxY9shE4tFFzmR9tGZBB0PscDD3ydAQeKjcwXRAKehva<br>39SiVl8cTnoSH/h9Pg+/8jHt3f0WSCB2GT1d+bAv0FmBQoM6QEsKpZ/fxT1zXFG8<br>NWYdXmkQ7LxrOKvoX987wKxekLe57tlb50oDnWVg4eRcN7CZ23rj/y8wL6yx2If/<br>5AebYWdKEP+tQWVmniLh+HaZSrYG/Txen7BBZQrDnBQwGmoWMXm0Ws/gaGEJDLOp<br>3e8h275ojQJbzThbndYvl+yUGG0vfMG8cA0K/FKZS2nKDzL9nHnhSVXrqTSRx/P2<br>uQENBFam5eoBCAD8wJdL24H3oh8YJMKnvrUC3SaDuK37I9dZJCoVWw1l19s7evBM<br>uvc6jGlN01XdEdglNUmJTN3SuvTGbKN/8DZKl9Of+U2B1UqUpeeSlEG77NpdoGD9<br>VnhRVusIFSGD88fmgtpuulILnzm4N/hpOm8wUY553SASHmRe6i6Tur8qwLgCUyW3<br>UOgxXHVwQ/GWfzJd05SJhN7wgTCu7BPy7jJMOlII+TYErQNhPNU48yUWM41302z5<br>3OAC91of6B8hyasLW4/e0uDhyta4JjxBlwVJsiECwoNi9JxKDJZ64q2oeeroL/OL<br>M/RJYCdt0VbX2zVIvb3Ogijhx52OJlBN8sdxABEBAAGJASUEGAECAA8FAlam5eoC<br>GwwFCQHhM4AACgkQtT4unSv1GdHRFgf/UMHDor7fwL2kujolA1ED+MZrfdizpHbk<br>+2XOnETKO5i6FNCM/PqvRedmTtOc03DCLrYKqwGt8wMbbhco60SroFbVrlLfAMOG<br>ZTXPBMASWLHhouPs/Wl5UpmbbrtNUlbhmePPyfeIye1CYxNKy6Ar4F/kjFdHGzu3<br>+ah0BX0d1i7YrMcTvrutfpHrU/ZSXcHMGw4DcKztHFeItVudzkIoqVBYGlMFMiSp<br>lQYQL6SDEnIWk/ClX1lJ8XoJlBhQzqOkDgnC/TQ2iRgEIpdaKq8OjJ7+m6N2pMJQ<br>b+5Gs7jH3moZBBqOTimKaZkKeZnLeXNSevlg3/rfjE5Wa/5URZyWOw==<br>=80VB<br>—–END PGP PUBLIC KEY BLOCK—–</p>
+        <p>今天用 <a href="http://phantomjs.org" target="_blank" rel="external">phantomjs</a> 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。<br>一直听说 <a href="http://casperjs.org" target="_blank" rel="external">casperjs</a> 是基于 phantomjs (和 SlimerJS) 的封装。想想组合起来应该没什么问题。<br>试过</p>
+<ol>
+<li>直接修改成 casperjs 的方法。</li>
+<li>casperjs 调用外部 js。</li>
+<li>直接将 phantomjs 的代码嵌套进去。</li>
+</ol>
+<p>问题都没有解决，总是和单独用 phantomjs 写的效果不一样。<br>最后 <a href="http://docs.casperjs.org/en/latest/faq.html#how-do-i-use-phantomjs-page-module-api-in-casperjs" target="_blank" rel="external">FQA</a> 找到这句话</p>
+<blockquote>
+<p>After casperjs.start(), you have phantomjs page module available in casper.page</p>
+</blockquote>
+<p>也就是说 casper.page 就是 phantomjs 中的 page 对象。可以直接稍微修改下 phantomjs 的代码，嵌套进 casperjs。<br>理论上应该就没问题，但还是不对。WTF。</p>
+<p>从头来过。直接在terminal敲了下 casperjs。有句 <strong>using phantomjs version</strong> 版本不对。<br>剩下就是替换，或者指明使用的 phantomjs 版本了。<br>我直接删了 casperjs 目录下的 phantomjs，然后做个软链接。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/01/28/my-key/" data-id="cilqjjmzv000c7rg641pt8k63" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/03/13/casperjs-phantomjs/" data-id="cilqjjmzz000e7rg6s8bx7zha" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/casperjs-phantomjs/">casperjs phantomjs</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2016/03/13/casperjs-phantomjs/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          casperjs-phantomjs
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/09/197-Rising-Temperature/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/01/28/my-key/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">197. Rising Temperature</div>
+      <div class="article-nav-title">my key</div>
     </a>
   
 </nav>

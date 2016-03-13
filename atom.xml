@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangke.pub/"/>
-  <updated>2016-01-28T06:17:51.000Z</updated>
+  <updated>2016-03-13T12:31:34.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
@@ -13,6 +13,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[casperjs-phantomjs]]></title>
+    <link href="http://zhangke.pub/2016/03/13/casperjs-phantomjs/"/>
+    <id>http://zhangke.pub/2016/03/13/casperjs-phantomjs/</id>
+    <published>2016-03-13T12:09:58.000Z</published>
+    <updated>2016-03-13T12:31:34.000Z</updated>
+    <content type="html"><![CDATA[<p>今天用 <a href="http://phantomjs.org" target="_blank" rel="external">phantomjs</a> 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。<br>一直听说 <a href="http://casperjs.org" target="_blank" rel="external">casperjs</a> 是基于 phantomjs (和 SlimerJS) 的封装。想想组合起来应该没什么问题。<br>试过</p>
+<ol>
+<li>直接修改成 casperjs 的方法。</li>
+<li>casperjs 调用外部 js。</li>
+<li>直接将 phantomjs 的代码嵌套进去。</li>
+</ol>
+<p>问题都没有解决，总是和单独用 phantomjs 写的效果不一样。<br>最后 <a href="http://docs.casperjs.org/en/latest/faq.html#how-do-i-use-phantomjs-page-module-api-in-casperjs" target="_blank" rel="external">FQA</a> 找到这句话</p>
+<blockquote>
+<p>After casperjs.start(), you have phantomjs page module available in casper.page</p>
+</blockquote>
+<p>也就是说 casper.page 就是 phantomjs 中的 page 对象。可以直接稍微修改下 phantomjs 的代码，嵌套进 casperjs。<br>理论上应该就没问题，但还是不对。WTF。</p>
+<p>从头来过。直接在terminal敲了下 casperjs。有句 <strong>using phantomjs version</strong> 版本不对。<br>剩下就是替换，或者指明使用的 phantomjs 版本了。<br>我直接删了 casperjs 目录下的 phantomjs，然后做个软链接。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天用 <a href="http://phantomjs.org" target="_blank" rel="external">phantomjs</a> 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。<br>一直听说 <a href]]>
+    </summary>
+    
+      <category term="casperjs phantomjs" scheme="http://zhangke.pub/tags/casperjs-phantomjs/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[my key]]></title>
