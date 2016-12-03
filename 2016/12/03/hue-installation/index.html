@@ -3,21 +3,39 @@
 <head>
   <meta charset="utf-8">
   
-  <title>262.trips and users | Hexo</title>
+  <title>Installing Hue on HDP | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Question
-Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trips` (&amp;#10;  `Id` int(3) NOT NULL AUTO_INCREMENT,&amp;#10;  `Client_Id` int(3) DEFAULT NULL,&amp;#10;  `Driver_Id` int(3) DEFAULT">
+  <meta name="description" content="Prepare dependencies
+maven
+
+other
+sudo yum install -y ant asciidoc \
+  cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-plain \
+  gcc gcc-c++ make \
+  krb5-devel libffi-devel libxml2-devel libxslt-devel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="262.trips and users">
-<meta property="og:url" content="http://zhangke.pub/2016/01/09/262-trips-and-users/index.html">
+<meta property="og:title" content="Installing Hue on HDP">
+<meta property="og:url" content="http://zhangke.pub/2016/12/03/hue-installation/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Question
-Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trips` (&amp;#10;  `Id` int(3) NOT NULL AUTO_INCREMENT,&amp;#10;  `Client_Id` int(3) DEFAULT NULL,&amp;#10;  `Driver_Id` int(3) DEFAULT">
-<meta property="og:updated_time" content="2016-01-09T02:51:22.000Z">
+<meta property="og:description" content="Prepare dependencies
+maven
+
+other
+sudo yum install -y ant asciidoc \
+  cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-plain \
+  gcc gcc-c++ make \
+  krb5-devel libffi-devel libxml2-devel libxslt-devel">
+<meta property="og:updated_time" content="2016-12-03T02:22:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="262.trips and users">
-<meta name="twitter:description" content="Question
-Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trips` (&amp;#10;  `Id` int(3) NOT NULL AUTO_INCREMENT,&amp;#10;  `Client_Id` int(3) DEFAULT NULL,&amp;#10;  `Driver_Id` int(3) DEFAULT">
+<meta name="twitter:title" content="Installing Hue on HDP">
+<meta name="twitter:description" content="Prepare dependencies
+maven
+
+other
+sudo yum install -y ant asciidoc \
+  cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-plain \
+  gcc gcc-c++ make \
+  krb5-devel libffi-devel libxml2-devel libxslt-devel">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -63,10 +81,10 @@ Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trip
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-262-trips-and-users" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hue-installation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/01/09/262-trips-and-users/" class="article-date">
-  <time datetime="2016-01-08T17:13:16.000Z" itemprop="datePublished">2016-01-09</time>
+    <a href="/2016/12/03/hue-installation/" class="article-date">
+  <time datetime="2016-12-03T02:20:32.000Z" itemprop="datePublished">2016-12-03</time>
 </a>
     
   </div>
@@ -77,7 +95,7 @@ Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trip
         
   
     <h1 class="article-title" itemprop="name">
-      262.trips and users
+      Installing Hue on HDP
     </h1>
   
 
@@ -85,17 +103,83 @@ Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trip
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://leetcode.com/problems/trips-and-users" target="_blank" rel="external">Question</a></p>
-<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE IF EXISTS `Trips`;&#10;&#10;CREATE TABLE `Trips` (&#10;  `Id` int(3) NOT NULL AUTO_INCREMENT,&#10;  `Client_Id` int(3) DEFAULT NULL,&#10;  `Driver_Id` int(3) DEFAULT NULL,&#10;  `City_Id` int(3) DEFAULT NULL,&#10;  `Status` varchar(32) DEFAULT NULL,&#10;  `Request_at` date DEFAULT NULL,&#10;  PRIMARY KEY (`Id`)&#10;) ENGINE=InnoDB DEFAULT CHARSET=latin1;&#10;&#10;INSERT INTO `Trips` (`Id`, `Client_Id`, `Driver_Id`, `City_Id`, `Status`, `Request_at`)&#10;VALUES&#10;&#9;(1,1,11,1,&#39;completed&#39;,&#39;2013-10-01&#39;),&#10;&#9;(2,2,12,6,&#39;cancelled_by_driver&#39;,&#39;2013-10-01&#39;),&#10;&#9;(3,3,13,6,&#39;completed&#39;,&#39;2013-10-01&#39;),&#10;&#9;(4,4,10,1,&#39;cancelled_by_client&#39;,&#39;2013-10-01&#39;),&#10;&#9;(5,1,11,6,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(6,2,12,6,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(7,3,12,12,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(8,2,10,12,&#39;completed&#39;,&#39;2013-10-03&#39;),&#10;&#9;(9,3,10,12,&#39;completed&#39;,&#39;2013-10-03&#39;),&#10;&#9;(10,4,13,12,&#39;cancelled_by_driver&#39;,&#39;2013-10-03&#39;);&#10;&#10;DROP TABLE IF EXISTS `Users`;&#10;&#10;CREATE TABLE `Users` (&#10;  `Users_Id` int(3) NOT NULL AUTO_INCREMENT,&#10;  `Banned` varchar(32) DEFAULT NULL,&#10;  `Role` varchar(32) DEFAULT NULL,&#10;  PRIMARY KEY (`Users_Id`)&#10;) ENGINE=InnoDB DEFAULT CHARSET=latin1;&#10;&#10;LOCK TABLES `users` WRITE;&#10;&#10;INSERT INTO `Users` (`Users_Id`, `Banned`, `Role`)&#10;VALUES&#10;&#9;(1,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(2,&#39;YES&#39;,&#39;client&#39;),&#10;&#9;(3,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(4,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(10,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(11,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(12,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(13,&#39;NO&#39;,&#39;driver&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;# Write your MySQL query statement below&#10;select total.day as &#39;Day&#39;, ROUND(IFNULL(cancelled.count,0)/total.count, 2) &#39;Cancellation Rate&#39;&#10;from&#10;&#10;(&#10;select t.Request_at as day , count(*) as count&#10;from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id&#10;where c.Banned = &#39;No&#39; and d.Banned = &#39;No&#39; and t.status != &#39;completed&#39; and t.Request_at between &#39;2013-10-01&#39; and &#39;2013-10-03&#39;&#10;group by t.Request_at&#10;) cancelled&#10;&#10;right join&#10;&#10;(&#10;select t.Request_at as day, count(*) as count&#10; from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id&#10; where  c.Banned = &#39;No&#39; and d.Banned = &#39;No&#39; and t.Request_at between &#39;2013-10-01&#39; and &#39;2013-10-03&#39;&#10; group by t.Request_at&#10;) total&#10;&#10;on cancelled.day = total.day&#10;&#10;group by total.day;</span><br></pre></td></tr></table></figure>
+        <h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
+<li><p><a href="http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" target="_blank" rel="external">maven</a></p>
+</li>
+<li><p>other</p>
+<pre><code>sudo yum install -y ant asciidoc \
+  cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-plain \
+  gcc gcc-c++ make \
+  krb5-devel libffi-devel libxml2-devel libxslt-devel \
+  mysql-devel openldap-devel python-devel sqlite-devel \
+  openssl-devel gmp-devel
+</code></pre></li>
+</ul>
+<h2 id="Download_tarball"><a href="#Download_tarball" class="headerlink" title="Download tarball"></a>Download tarball</h2><pre><code>wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.11.0/hue-3.11.0.tgz
+</code></pre><h2 id="Install_HUE"><a href="#Install_HUE" class="headerlink" title="Install HUE"></a>Install HUE</h2><pre><code>sudo make install
+</code></pre><h2 id="Fix_user_permissions"><a href="#Fix_user_permissions" class="headerlink" title="Fix user permissions"></a>Fix user permissions</h2><pre><code>useradd -G hadoop hue
+sudo chown -R hue:hue /usr/local/hue
+</code></pre><h2 id="Configuring_Hadoop_and_HUE"><a href="#Configuring_Hadoop_and_HUE" class="headerlink" title="Configuring Hadoop and HUE"></a>Configuring Hadoop and HUE</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><ul>
+<li><p>ensure WebHDFS is enabled</p>
+<ul>
+<li><p>hdfs-site.xml</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;
+  &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>add ‘proxy’ user hosts and groups for HUE</p>
+<ul>
+<li><p>core-site.xml</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;hadoop.proxyuser.hue.hosts&lt;/name&gt;
+  &lt;value&gt;*&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+  &lt;name&gt;hadoop.proxyuser.hue.groups&lt;/name&gt;
+  &lt;value&gt;*&lt;/value&gt;
+&lt;/property&gt;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>enable HDFS file access control lists (FACLs) (optional).</li>
+</ul>
+<h3 id="HUE"><a href="#HUE" class="headerlink" title="HUE"></a>HUE</h3><ul>
+<li><p><code>/usr/local/hue/desktop/conf/hue.ini</code></p>
+<ul>
+<li>secret_key</li>
+<li>time_zone=Asia/Shanghai</li>
+<li>database</li>
+<li>hadoop</li>
+<li>yarn_clusters</li>
+<li>hbase</li>
+<li>impala</li>
+<li>oozie</li>
+</ul>
+</li>
+</ul>
+<h2 id="Create_MySQL_database"><a href="#Create_MySQL_database" class="headerlink" title="Create MySQL database"></a>Create MySQL database</h2><pre><code>CREATE DATABASE hue DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos;;
+</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://gethue.com/hadoop-hue-3-on-hdp-installation-tutorial" target="_blank" rel="external">Hue 3 on HDP installation tutorial</a></li>
+<li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_ig_hue_database.html#cdh_ig_hue_database_mysql" target="_blank" rel="external">Using an External Database for Hue Using the Command Line</a></li>
+<li><a href="http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.3/bk_reference/content/index.html" target="_blank" rel="external">HDP Reference</a></li>
+<li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/hue.html" target="_blank" rel="external">Get Started with Hue</a></li>
+<li><a href="https://archive.cloudera.com/cdh5/cdh/5/hue/user-guide/index.html" target="_blank" rel="external">Hue User Guide</a></li>
+<li><a href="https://www.cloudera.com/content/www/zh-CN/documentation/enterprise/5-3-x/topics/introduction.html" target="_blank" rel="external">中文版</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/01/09/262-trips-and-users/" data-id="ciw8lgl29000nh8g6bgn0kpn0" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/12/03/hue-installation/" data-id="ciw8lgl21000gh8g6ukpoygd2" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode-database/">leetcode database</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hue/">hue</a></li></ul>
 
     </footer>
   </div>
@@ -103,19 +187,10 @@ Initialization1DROP TABLE IF EXISTS `Trips`;&amp;#10;&amp;#10;CREATE TABLE `Trip
     
 <nav id="article-nav">
   
-    <a href="/2016/01/09/197-Rising-Temperature/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          197. Rising Temperature
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/23/nginx-cache/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/12/03/impala-installation/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">nginx cache</div>
+      <div class="article-nav-title">impala-installation</div>
     </a>
   
 </nav>

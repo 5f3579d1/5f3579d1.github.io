@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangke.pub/"/>
-  <updated>2016-03-13T12:31:34.000Z</updated>
+  <updated>2016-12-03T02:22:23.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
@@ -13,6 +13,233 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Installing Hue on HDP]]></title>
+    <link href="http://zhangke.pub/2016/12/03/hue-installation/"/>
+    <id>http://zhangke.pub/2016/12/03/hue-installation/</id>
+    <published>2016-12-03T02:20:32.000Z</published>
+    <updated>2016-12-03T02:22:23.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
+<li><p><a href="http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" target="_blank" rel="external">maven</a></p>
+</li>
+<li><p>other</p>
+<pre><code>sudo yum install -y ant asciidoc \
+  cyrus-sasl-devel cyrus-sasl-gssapi cyrus-sasl-plain \
+  gcc gcc-c++ make \
+  krb5-devel libffi-devel libxml2-devel libxslt-devel \
+  mysql-devel openldap-devel python-devel sqlite-devel \
+  openssl-devel gmp-devel
+</code></pre></li>
+</ul>
+<h2 id="Download_tarball"><a href="#Download_tarball" class="headerlink" title="Download tarball"></a>Download tarball</h2><pre><code>wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.11.0/hue-3.11.0.tgz
+</code></pre><h2 id="Install_HUE"><a href="#Install_HUE" class="headerlink" title="Install HUE"></a>Install HUE</h2><pre><code>sudo make install
+</code></pre><h2 id="Fix_user_permissions"><a href="#Fix_user_permissions" class="headerlink" title="Fix user permissions"></a>Fix user permissions</h2><pre><code>useradd -G hadoop hue
+sudo chown -R hue:hue /usr/local/hue
+</code></pre><h2 id="Configuring_Hadoop_and_HUE"><a href="#Configuring_Hadoop_and_HUE" class="headerlink" title="Configuring Hadoop and HUE"></a>Configuring Hadoop and HUE</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><ul>
+<li><p>ensure WebHDFS is enabled</p>
+<ul>
+<li><p>hdfs-site.xml</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;dfs.webhdfs.enabled&lt;/name&gt;
+  &lt;value&gt;true&lt;/value&gt;
+&lt;/property&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>add ‘proxy’ user hosts and groups for HUE</p>
+<ul>
+<li><p>core-site.xml</p>
+<pre><code>&lt;property&gt;
+  &lt;name&gt;hadoop.proxyuser.hue.hosts&lt;/name&gt;
+  &lt;value&gt;*&lt;/value&gt;
+&lt;/property&gt;
+&lt;property&gt;
+  &lt;name&gt;hadoop.proxyuser.hue.groups&lt;/name&gt;
+  &lt;value&gt;*&lt;/value&gt;
+&lt;/property&gt;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>enable HDFS file access control lists (FACLs) (optional).</li>
+</ul>
+<h3 id="HUE"><a href="#HUE" class="headerlink" title="HUE"></a>HUE</h3><ul>
+<li><p><code>/usr/local/hue/desktop/conf/hue.ini</code></p>
+<ul>
+<li>secret_key</li>
+<li>time_zone=Asia/Shanghai</li>
+<li>database</li>
+<li>hadoop</li>
+<li>yarn_clusters</li>
+<li>hbase</li>
+<li>impala</li>
+<li>oozie</li>
+</ul>
+</li>
+</ul>
+<h2 id="Create_MySQL_database"><a href="#Create_MySQL_database" class="headerlink" title="Create MySQL database"></a>Create MySQL database</h2><pre><code>CREATE DATABASE hue DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos;;
+</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://gethue.com/hadoop-hue-3-on-hdp-installation-tutorial" target="_blank" rel="external">Hue 3 on HDP installation tutorial</a></li>
+<li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/cdh_ig_hue_database.html#cdh_ig_hue_database_mysql" target="_blank" rel="external">Using an External Database for Hue Using the Command Line</a></li>
+<li><a href="http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.5.3/bk_reference/content/index.html" target="_blank" rel="external">HDP Reference</a></li>
+<li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/hue.html" target="_blank" rel="external">Get Started with Hue</a></li>
+<li><a href="https://archive.cloudera.com/cdh5/cdh/5/hue/user-guide/index.html" target="_blank" rel="external">Hue User Guide</a></li>
+<li><a href="https://www.cloudera.com/content/www/zh-CN/documentation/enterprise/5-3-x/topics/introduction.html" target="_blank" rel="external">中文版</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><]]>
+    </summary>
+    
+      <category term="hue" scheme="http://zhangke.pub/tags/hue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[impala-installation]]></title>
+    <link href="http://zhangke.pub/2016/12/03/impala-installation/"/>
+    <id>http://zhangke.pub/2016/12/03/impala-installation/</id>
+    <published>2016-12-03T02:11:01.000Z</published>
+    <updated>2016-12-03T02:20:10.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><ul>
+<li>CentOS 6.8</li>
+<li>Impala 2.7.0</li>
+<li>HDP 2.5.3</li>
+</ul>
+<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><h3 id="rpm"><a 5="" 6="" href="#rpm" class="headerlink" title="<a href=" https:="" archive.cloudera.com="" cdh5="" redhat="" x86_64="" cdh="" rpms="" x86_64"="">rpm</a>"><a href="https://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/5/RPMS/x86_64" target="_blank" rel="external">rpm</a></h3><ul>
+<li>impala-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
+<li>impala-catalog-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
+<li>impala-server-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
+<li>impala-shell-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
+<li>impala-state-store-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
+<li>bigtop-utils-0.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.30.el6.noarch.rpm</li>
+</ul>
+<h3 id="other"><a href="#other" class="headerlink" title="other"></a>other</h3><ul>
+<li><a href="https://repository.cloudera.com/artifactory/cloudera-repos/org/apache/sentry/sentry-dist/1.5.1-cdh5.9.0/sentry-dist-1.5.1-cdh5.9.0-bin.tar.gz" target="_blank" rel="external">sentry</a> (included <code>parquet-hadoop-bundle.jar</code>)</li>
+</ul>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><ol>
+<li><p>install rpm</p>
+<pre><code>rpm -ivh *.rpm --nodeps
+</code></pre></li>
+<li><p>copy config file</p>
+<pre><code>ln -s /usr/hdp/current/hadoop-client/conf/core-site.xml /etc/impala/conf/
+ln -s /usr/hdp/current/hadoop-client/conf/hdfs-site.xml /etc/impala/conf/
+ln -s /usr/hdp/current/hive-client/conf/hive-site.xml /etc/impala/conf/
+ln -s /usr/hdp/current/hbase-client/conf/hbase-site.xml /etc/impala/conf/
+</code></pre></li>
+<li><p>replace error library link</p>
+<pre><code>HDP_VERSION=2.5.0.0-1245
+
+mkdir -p /usr/lib/avro \
+  /usr/lib/hadoop-yarn \
+  /usr/lib/hadoop-hdfs \
+  /usr/lib/hadoop/client \
+  /usr/lib/hadoop/lib/native \
+  /usr/lib/hadoop-mapreduce \
+  /usr/lib/hbase \
+  /usr/lib/hive/lib \
+  /usr/lib/zookeeper \
+  /usr/lib/parquet \
+  /usr/lib/sentry/lib/impala
+
+cp /usr/hdp/$HDP_VERSION/hadoop/client/avro.jar /usr/lib/avro/avro.jar
+cp /usr/hdp/$HDP_VERSION/hadoop/hadoop-annotations.jar /usr/lib/hadoop/hadoop-annotations.jar
+cp /usr/hdp/current/hadoop-client/hadoop-auth.jar /usr/lib/hadoop/hadoop-auth.jar
+cp /usr/hdp/$HDP_VERSION/hadoop/hadoop-aws.jar /usr/lib/hadoop/client/hadoop-aws.jar
+cp /usr/hdp/$HDP_VERSION/hadoop/hadoop-common.jar /usr/lib/hadoop/hadoop-common.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-common.jar /usr/lib/hadoop-yarn/hadoop-yarn-server-common.jar
+cp /usr/hdp/current/hadoop-hdfs-client/hadoop-hdfs.jar /usr/lib/hadoop-hdfs/hadoop-hdfs.jar
+cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-common.jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-common.jar
+cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core.jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-core.jar
+cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-jobclient.jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-jobclient.jar
+cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-client-shuffle.jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-client-shuffle.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-api.jar /usr/lib/hadoop-yarn/hadoop-yarn-api.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-client.jar /usr/lib/hadoop-yarn/hadoop-yarn-client.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-common.jar /usr/lib/hadoop-yarn/hadoop-yarn-common.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-applicationhistoryservice.jar /usr/lib/hadoop-yarn/hadoop-yarn-server-applicationhistoryservice.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-common.jar /usr/lib/hadoop-yarn/hadoop-yarn-server-common.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-nodemanager.jar /usr/lib/hadoop-yarn/hadoop-yarn-server-nodemanager.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-resourcemanager.jar /usr/lib/hadoop-yarn/hadoop-yarn-server-resourcemanager.jar
+cp /usr/hdp/current/hadoop-yarn-client/hadoop-yarn-server-web-proxy.jar /usr/lib/hadoop-yarn/hadoop-yarn-server-web-proxy.jar
+cp /usr/hdp/$HDP_VERSION/hbase/lib/hbase-annotations.jar /usr/lib/hbase/hbase-annotations.jar
+cp /usr/hdp/$HDP_VERSION/hbase/lib/hbase-client.jar /usr/lib/hbase/hbase-client.jar
+cp /usr/hdp/current/hbase-client/lib/hbase-common.jar /usr/lib/hbase/hbase-common.jar
+cp /usr/hdp/current/hbase-client/lib/hbase-protocol.jar /usr/lib/hbase/hbase-protocol.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-ant.jar /usr/lib/hive/lib/hive-ant.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-beeline.jar /usr/lib/hive/lib/hive-beeline.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-common.jar /usr/lib/hive/lib/hive-common.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-exec.jar /usr/lib/hive/lib/hive-exec.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-hbase-handler.jar /usr/lib/hive/lib/hive-hbase-handler.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-metastore.jar /usr/lib/hive/lib/hive-metastore.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-serde.jar /usr/lib/hive/lib/hive-serde.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-service.jar /usr/lib/hive/lib/hive-service.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-shims-common.jar /usr/lib/hive/lib/hive-shims-common.jar
+cp /usr/hdp/$HDP_VERSION/hive/lib/hive-shims.jar /usr/lib/hive/lib/hive-shims.jar
+cp /usr/hdp/$HDP_VERSION/hive2/lib/hive-shims-scheduler.jar /usr/lib/hive/lib/hive-shims-scheduler.jar
+cp /usr/hdp/$HDP_VERSION/hadoop/lib/native/libhadoop.so /usr/lib/hadoop/lib/native/libhadoop.so
+cp /usr/hdp/$HDP_VERSION/hadoop/lib/native/libhadoop.so.1.0.0 /usr/lib/hadoop/lib/native/libhadoop.so.1.0.0
+cp /usr/hdp/$HDP_VERSION/usr/lib/libhdfs.so /usr/lib64/libhdfs.so
+cp /usr/hdp/$HDP_VERSION/usr/lib/libhdfs.so.0.0.0 /usr/lib64/libhdfs.so.0.0.0
+cp /usr/hdp/current/zookeeper-client/zookeeper.jar /usr/lib/zookeeper/zookeeper.jar
+cp lib/parquet-hadoop-bundle-1.5.0-cdh5.9.0.jar /usr/lib/parquet/parquet-hadoop-bundle.jar
+cp sentry-binding-hive-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-binding-hive.jar
+cp sentry-core-common-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-core-common.jar
+cp sentry-core-model-db-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-core-model-db.jar
+cp sentry-core-model-kafka-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-core-model-kafka.jar
+cp sentry-core-model-search-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-core-model-search.jar
+cp sentry-policy-common-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-policy-common.jar
+cp sentry-policy-db-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-policy-db.jar
+cp sentry-policy-kafka-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-policy-kafka.jar
+cp sentry-policy-search-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-policy-search.jar
+cp sentry-provider-cache-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-cache.jar
+cp sentry-provider-common-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-common.jar
+cp sentry-provider-db-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/impala/sentry-provider-db-sh.jar
+cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-file.jar
+</code></pre></li>
+<li><p>add to hadoop group</p>
+<pre><code>usermod -a -G hadoop impala
+</code></pre></li>
+<li><p>change <code>hdfs-site.xml</code></p>
+<ul>
+<li>dfs.datanode.hdfs-blocks-metadata.enabled=true</li>
+<li>dfs.client.file-block-storage-locations.timeout.millis=10000</li>
+</ul>
+</li>
+</ol>
+<h2 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h2><ul>
+<li>impala conf file <code>/etc/default/impala</code></li>
+</ul>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li><p><code>impalad-main.cc:63] NoSuchMethodError: setCaching</code></p>
+<blockquote>
+<p>replace <code>hbase-client.jar</code> to <code>hbase-client-1.2.0-cdh5.9.0.jar</code></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h2><pre><code>/etc/init.d/impala-catalog restart
+/etc/init.d/impala-state-store restart
+/etc/init.d/impala-server restart
+</code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/impala_install.html" target="_blank" rel="external">Impala Installation</a></li>
+<li><a href="https://yq.aliyun.com/articles/58387" target="_blank" rel="external"><strong>用引导操作给E-MapReduce集群安装impala</strong></a></li>
+<li><a href="http://blog.yuanxiaolong.cn/blog/2015/12/27/install-impala" target="_blank" rel="external">介绍impala的 rpm包安装形式，利用impala 2.2.0</a></li>
+<li><a href="http://www.cnblogs.com/chenz/articles/3629698.html" target="_blank" rel="external">Impala1.2.4安装手册</a></li>
+<li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/impala_tutorial.html" target="_blank" rel="external">Impala Tutorials</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><ul>
+<li>CentOS 6.8</li>
+<li>Impala 2.7.0</li>
+<li>HD]]>
+    </summary>
+    
+      <category term="imapala" scheme="http://zhangke.pub/tags/imapala/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[casperjs-phantomjs]]></title>
