@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://zhangke.pub/"/>
-  <updated>2016-12-03T02:22:23.000Z</updated>
+  <updated>2016-12-03T02:22:06.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://zhangke.pub/2016/12/03/hue-installation/"/>
     <id>http://zhangke.pub/2016/12/03/hue-installation/</id>
     <published>2016-12-03T02:20:32.000Z</published>
-    <updated>2016-12-03T02:22:23.000Z</updated>
+    <updated>2016-12-03T02:22:06.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
 <li><p><a href="http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" target="_blank" rel="external">maven</a></p>
 </li>
@@ -103,11 +103,11 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
     <link href="http://zhangke.pub/2016/12/03/impala-installation/"/>
     <id>http://zhangke.pub/2016/12/03/impala-installation/</id>
     <published>2016-12-03T02:11:01.000Z</published>
-    <updated>2016-12-03T02:20:10.000Z</updated>
+    <updated>2016-12-03T02:26:20.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><ul>
 <li>CentOS 6.8</li>
 <li>Impala 2.7.0</li>
-<li>HDP 2.5.3</li>
+<li>HDP 2.5.0</li>
 </ul>
 <h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><h3 id="rpm"><a 5="" 6="" href="#rpm" class="headerlink" title="<a href=" https:="" archive.cloudera.com="" cdh5="" redhat="" x86_64="" cdh="" rpms="" x86_64"="">rpm</a>"><a href="https://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/5/RPMS/x86_64" target="_blank" rel="external">rpm</a></h3><ul>
 <li>impala-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
