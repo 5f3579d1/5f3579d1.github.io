@@ -61,6 +61,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-dnsmasq-on-docker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/06/dnsmasq-on-docker/" class="article-date">
+  <time datetime="2016-12-06T13:50:29.000Z" itemprop="datePublished">2016-12-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/06/dnsmasq-on-docker/">dnsmasq on docker</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name dns -p <span class="number">53</span>:<span class="number">53</span>/tcp -p <span class="number">53</span>:<span class="number">53</span>/udp --cap-add=NET_ADMIN andyshinn/dnsmasq \</span><br><span class="line"> -A /hdp-master/<span class="number">90.90</span><span class="number">.90</span><span class="number">.5</span> \</span><br><span class="line"> -A /hdp-slave1/<span class="number">90.90</span><span class="number">.90</span><span class="number">.6</span> \</span><br><span class="line"> -A /hdp-slave2/<span class="number">90.90</span><span class="number">.90</span><span class="number">.7</span> \</span><br><span class="line"> -A /hdp-slave3/<span class="number">90.90</span><span class="number">.90</span><span class="number">.8</span> \</span><br><span class="line"> -A /mysql/<span class="number">60.60</span><span class="number">.60</span><span class="number">.100</span> \</span><br><span class="line"> --<span class="built_in">log</span>-facility=-</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhangke.pub/2016/12/06/dnsmasq-on-docker/" data-id="ciwdkgzl7000kaug6x3ni92km" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dnsmasq-docker/">dnsmasq docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hue-installation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/03/hue-installation/" class="article-date">
@@ -156,7 +195,7 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/12/03/hue-installation/" data-id="ciw8lds790000cjg6vukhza4o" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/12/03/hue-installation/" data-id="ciwdkgzl1000gaug6ode9hc3u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hue/">hue</a></li></ul>
@@ -319,7 +358,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/12/03/impala-installation/" data-id="ciw8l4adh000db3g6yjlj5cs9" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/12/03/impala-installation/" data-id="ciwdkgzky000daug6h0wqqxzy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/imapala/">imapala</a></li></ul>
@@ -369,7 +408,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/03/13/casperjs-phantomjs/" data-id="ciw8l4adk000hb3g6z94p9iji" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/03/13/casperjs-phantomjs/" data-id="ciwdkgzla000naug6o7ey48uw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/casperjs-phantomjs/">casperjs phantomjs</a></li></ul>
@@ -409,7 +448,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/01/28/my-key/" data-id="ciw8l4adf000cb3g68rlvqyqi" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/01/28/my-key/" data-id="ciwdkgzkw000caug6ast5adj5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -448,7 +487,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/01/09/197-Rising-Temperature/" data-id="ciw8l4acp0000b3g6yyms7r3d" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/01/09/197-Rising-Temperature/" data-id="ciwdkgzk70000aug6lic2j5kt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode-database/">leetcode database</a></li></ul>
@@ -489,7 +528,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/01/09/262-trips-and-users/" data-id="ciw8l4adn000kb3g6tz68ejoy" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/01/09/262-trips-and-users/" data-id="ciwdkgzld000qaug6xobewex4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode-database/">leetcode database</a></li></ul>
@@ -529,7 +568,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2015/12/23/nginx-cache/" data-id="ciw8l4adb0009b3g6wmfgoqo1" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2015/12/23/nginx-cache/" data-id="ciwdkgzkt0009aug6kdf1cegx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx-cache/">nginx cache</a></li></ul>
@@ -568,7 +607,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2015/12/23/yum-install-iftop/" data-id="ciw8l4ad00003b3g6zbqacqks" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2015/12/23/yum-install-iftop/" data-id="ciwdkgzkm0003aug6p766lc3g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yum-iftop/">yum iftop</a></li></ul>
@@ -612,7 +651,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2015/12/09/selenium-12306购票/" data-id="ciw8l4ad80006b3g6oab7j8sr" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2015/12/09/selenium-12306购票/" data-id="ciwdkgzkq0006aug60n0440zj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/selenium-python/">selenium python</a></li></ul>
@@ -624,51 +663,10 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/09/hello-world/" class="article-date">
-  <time datetime="2015-12-09T08:13:15.000Z" itemprop="datePublished">2015-12-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2015/12/09/hello-world/" data-id="ciw8l4adi000gb3g62qgej82p" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -680,7 +678,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/casperjs-phantomjs/">casperjs phantomjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hue/">hue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/imapala/">imapala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode-database/">leetcode database</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx-cache/">nginx cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium-python/">selenium python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yum-iftop/">yum iftop</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/casperjs-phantomjs/">casperjs phantomjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dnsmasq-docker/">dnsmasq docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hue/">hue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/imapala/">imapala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode-database/">leetcode database</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx-cache/">nginx cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium-python/">selenium python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yum-iftop/">yum iftop</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -689,7 +687,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/casperjs-phantomjs/" style="font-size: 10px;">casperjs phantomjs</a> <a href="/tags/hue/" style="font-size: 10px;">hue</a> <a href="/tags/imapala/" style="font-size: 10px;">imapala</a> <a href="/tags/leetcode-database/" style="font-size: 20px;">leetcode database</a> <a href="/tags/nginx-cache/" style="font-size: 10px;">nginx cache</a> <a href="/tags/selenium-python/" style="font-size: 10px;">selenium python</a> <a href="/tags/yum-iftop/" style="font-size: 10px;">yum iftop</a>
+      <a href="/tags/casperjs-phantomjs/" style="font-size: 10px;">casperjs phantomjs</a> <a href="/tags/dnsmasq-docker/" style="font-size: 10px;">dnsmasq docker</a> <a href="/tags/hue/" style="font-size: 10px;">hue</a> <a href="/tags/imapala/" style="font-size: 10px;">imapala</a> <a href="/tags/leetcode-database/" style="font-size: 20px;">leetcode database</a> <a href="/tags/nginx-cache/" style="font-size: 10px;">nginx cache</a> <a href="/tags/selenium-python/" style="font-size: 10px;">selenium python</a> <a href="/tags/yum-iftop/" style="font-size: 10px;">yum iftop</a>
     </div>
   </div>
 
@@ -698,7 +696,7 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -708,6 +706,10 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/12/06/dnsmasq-on-docker/">dnsmasq on docker</a>
+          </li>
         
           <li>
             <a href="/2016/12/03/hue-installation/">Installing Hue on HDP</a>
@@ -723,10 +725,6 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
         
           <li>
             <a href="/2016/01/28/my-key/">my key</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/09/197-Rising-Temperature/">197. Rising Temperature</a>
           </li>
         
       </ul>
