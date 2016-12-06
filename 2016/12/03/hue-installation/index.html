@@ -43,7 +43,7 @@ sudo yum install -y ant asciidoc \
     <link rel="icon" href="/favicon.png">
   
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   
 
 </head>
@@ -103,7 +103,7 @@ sudo yum install -y ant asciidoc \
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
+        <h2 id="Prepare-dependencies"><a href="#Prepare-dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
 <li><p><a href="http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" target="_blank" rel="external">maven</a></p>
 </li>
 <li><p>other</p>
@@ -115,11 +115,11 @@ sudo yum install -y ant asciidoc \
   openssl-devel gmp-devel
 </code></pre></li>
 </ul>
-<h2 id="Download_tarball"><a href="#Download_tarball" class="headerlink" title="Download tarball"></a>Download tarball</h2><pre><code>wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.11.0/hue-3.11.0.tgz
-</code></pre><h2 id="Install_HUE"><a href="#Install_HUE" class="headerlink" title="Install HUE"></a>Install HUE</h2><pre><code>sudo make install
-</code></pre><h2 id="Fix_user_permissions"><a href="#Fix_user_permissions" class="headerlink" title="Fix user permissions"></a>Fix user permissions</h2><pre><code>useradd -G hadoop hue
+<h2 id="Download-tarball"><a href="#Download-tarball" class="headerlink" title="Download tarball"></a>Download tarball</h2><pre><code>wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.11.0/hue-3.11.0.tgz
+</code></pre><h2 id="Install-HUE"><a href="#Install-HUE" class="headerlink" title="Install HUE"></a>Install HUE</h2><pre><code>sudo make install
+</code></pre><h2 id="Fix-user-permissions"><a href="#Fix-user-permissions" class="headerlink" title="Fix user permissions"></a>Fix user permissions</h2><pre><code>useradd -G hadoop hue
 sudo chown -R hue:hue /usr/local/hue
-</code></pre><h2 id="Configuring_Hadoop_and_HUE"><a href="#Configuring_Hadoop_and_HUE" class="headerlink" title="Configuring Hadoop and HUE"></a>Configuring Hadoop and HUE</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><ul>
+</code></pre><h2 id="Configuring-Hadoop-and-HUE"><a href="#Configuring-Hadoop-and-HUE" class="headerlink" title="Configuring Hadoop and HUE"></a>Configuring Hadoop and HUE</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><ul>
 <li><p>ensure WebHDFS is enabled</p>
 <ul>
 <li><p>hdfs-site.xml</p>
@@ -162,7 +162,7 @@ sudo chown -R hue:hue /usr/local/hue
 </ul>
 </li>
 </ul>
-<h2 id="Create_MySQL_database"><a href="#Create_MySQL_database" class="headerlink" title="Create MySQL database"></a>Create MySQL database</h2><pre><code>CREATE DATABASE hue DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+<h2 id="Create-MySQL-database"><a href="#Create-MySQL-database" class="headerlink" title="Create MySQL database"></a>Create MySQL database</h2><pre><code>CREATE DATABASE hue DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos;;
 </code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="http://gethue.com/hadoop-hue-3-on-hdp-installation-tutorial" target="_blank" rel="external">Hue 3 on HDP installation tutorial</a></li>
@@ -176,7 +176,7 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhangke.pub/2016/12/03/hue-installation/" data-id="ciwdkgzl1000gaug6ode9hc3u" class="article-share-link">Share</a>
+      <a data-url="http://zhangke.pub/2016/12/03/hue-installation/" data-id="ciwdlh9l000080hg601jxjeyk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hue/">hue</a></li></ul>
@@ -217,7 +217,7 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/casperjs-phantomjs/">casperjs phantomjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dnsmasq-docker/">dnsmasq docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hue/">hue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/imapala/">imapala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode-database/">leetcode database</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx-cache/">nginx cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium-python/">selenium python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yum-iftop/">yum iftop</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/casperjs-phantomjs/">casperjs phantomjs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dnsmasq/">dnsmasq</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hue/">hue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/imapala/">imapala</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode-database/">leetcode database</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx-cache/">nginx cache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium-python/">selenium python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/yum-iftop/">yum iftop</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -226,7 +226,7 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/casperjs-phantomjs/" style="font-size: 10px;">casperjs phantomjs</a> <a href="/tags/dnsmasq-docker/" style="font-size: 10px;">dnsmasq docker</a> <a href="/tags/hue/" style="font-size: 10px;">hue</a> <a href="/tags/imapala/" style="font-size: 10px;">imapala</a> <a href="/tags/leetcode-database/" style="font-size: 20px;">leetcode database</a> <a href="/tags/nginx-cache/" style="font-size: 10px;">nginx cache</a> <a href="/tags/selenium-python/" style="font-size: 10px;">selenium python</a> <a href="/tags/yum-iftop/" style="font-size: 10px;">yum iftop</a>
+      <a href="/tags/casperjs-phantomjs/" style="font-size: 10px;">casperjs phantomjs</a> <a href="/tags/dnsmasq/" style="font-size: 10px;">dnsmasq</a> <a href="/tags/hue/" style="font-size: 10px;">hue</a> <a href="/tags/imapala/" style="font-size: 10px;">imapala</a> <a href="/tags/leetcode-database/" style="font-size: 20px;">leetcode database</a> <a href="/tags/nginx-cache/" style="font-size: 10px;">nginx cache</a> <a href="/tags/selenium-python/" style="font-size: 10px;">selenium python</a> <a href="/tags/yum-iftop/" style="font-size: 10px;">yum iftop</a>
     </div>
   </div>
 
@@ -296,11 +296,11 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

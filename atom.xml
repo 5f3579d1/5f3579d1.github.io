@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Hexo]]></title>
+  <title>Hexo</title>
   
   <link href="/atom.xml" rel="self"/>
+  
   <link href="http://zhangke.pub/"/>
-  <updated>2016-12-06T13:58:45.000Z</updated>
+  <updated>2016-12-06T14:23:50.000Z</updated>
   <id>http://zhangke.pub/</id>
   
   <author>
-    <name><![CDATA[k]]></name>
+    <name>k</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[dnsmasq on docker]]></title>
+    <title>dnsmasq on docker</title>
     <link href="http://zhangke.pub/2016/12/06/dnsmasq-on-docker/"/>
     <id>http://zhangke.pub/2016/12/06/dnsmasq-on-docker/</id>
     <published>2016-12-06T13:50:29.000Z</published>
-    <updated>2016-12-06T13:58:45.000Z</updated>
-    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name dns -p <span class="number">53</span>:<span class="number">53</span>/tcp -p <span class="number">53</span>:<span class="number">53</span>/udp --cap-add=NET_ADMIN andyshinn/dnsmasq \</span><br><span class="line"> -A /hdp-master/<span class="number">90.90</span><span class="number">.90</span><span class="number">.5</span> \</span><br><span class="line"> -A /hdp-slave1/<span class="number">90.90</span><span class="number">.90</span><span class="number">.6</span> \</span><br><span class="line"> -A /hdp-slave2/<span class="number">90.90</span><span class="number">.90</span><span class="number">.7</span> \</span><br><span class="line"> -A /hdp-slave3/<span class="number">90.90</span><span class="number">.90</span><span class="number">.8</span> \</span><br><span class="line"> -A /mysql/<span class="number">60.60</span><span class="number">.60</span><span class="number">.100</span> \</span><br><span class="line"> --<span class="built_in">log</span>-facility=-</span><br></pre></td></tr></table></figure>
+    <updated>2016-12-06T14:23:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">docker run -d --name dns -p 53:53/tcp -p 53:53/udp --cap-add=NET_ADMIN andyshinn/dnsmasq \</div><div class="line"> -A /hdp-master/90.90.90.5 \</div><div class="line"> -A /hdp-slave1/90.90.90.6 \</div><div class="line"> -A /hdp-slave2/90.90.90.7 \</div><div class="line"> -A /hdp-slave3/90.90.90.8 \</div><div class="line"> -A /mysql/60.60.60.100 \</div><div class="line"> --log-facility=-</div></pre></td></tr></table></figure>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="]]>
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+    
     </summary>
     
-      <category term="dnsmasq docker" scheme="http://zhangke.pub/tags/dnsmasq-docker/"/>
+    
+      <category term="dnsmasq" scheme="http://zhangke.pub/tags/dnsmasq/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[Installing Hue on HDP]]></title>
+    <title>Installing Hue on HDP</title>
     <link href="http://zhangke.pub/2016/12/03/hue-installation/"/>
     <id>http://zhangke.pub/2016/12/03/hue-installation/</id>
     <published>2016-12-03T02:20:32.000Z</published>
     <updated>2016-12-03T02:22:23.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
+    
+    <content type="html"><![CDATA[<h2 id="Prepare-dependencies"><a href="#Prepare-dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><ul>
 <li><p><a href="http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" target="_blank" rel="external">maven</a></p>
 </li>
 <li><p>other</p>
@@ -48,11 +55,11 @@
   openssl-devel gmp-devel
 </code></pre></li>
 </ul>
-<h2 id="Download_tarball"><a href="#Download_tarball" class="headerlink" title="Download tarball"></a>Download tarball</h2><pre><code>wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.11.0/hue-3.11.0.tgz
-</code></pre><h2 id="Install_HUE"><a href="#Install_HUE" class="headerlink" title="Install HUE"></a>Install HUE</h2><pre><code>sudo make install
-</code></pre><h2 id="Fix_user_permissions"><a href="#Fix_user_permissions" class="headerlink" title="Fix user permissions"></a>Fix user permissions</h2><pre><code>useradd -G hadoop hue
+<h2 id="Download-tarball"><a href="#Download-tarball" class="headerlink" title="Download tarball"></a>Download tarball</h2><pre><code>wget https://dl.dropboxusercontent.com/u/730827/hue/releases/3.11.0/hue-3.11.0.tgz
+</code></pre><h2 id="Install-HUE"><a href="#Install-HUE" class="headerlink" title="Install HUE"></a>Install HUE</h2><pre><code>sudo make install
+</code></pre><h2 id="Fix-user-permissions"><a href="#Fix-user-permissions" class="headerlink" title="Fix user permissions"></a>Fix user permissions</h2><pre><code>useradd -G hadoop hue
 sudo chown -R hue:hue /usr/local/hue
-</code></pre><h2 id="Configuring_Hadoop_and_HUE"><a href="#Configuring_Hadoop_and_HUE" class="headerlink" title="Configuring Hadoop and HUE"></a>Configuring Hadoop and HUE</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><ul>
+</code></pre><h2 id="Configuring-Hadoop-and-HUE"><a href="#Configuring-Hadoop-and-HUE" class="headerlink" title="Configuring Hadoop and HUE"></a>Configuring Hadoop and HUE</h2><h3 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h3><ul>
 <li><p>ensure WebHDFS is enabled</p>
 <ul>
 <li><p>hdfs-site.xml</p>
@@ -95,7 +102,7 @@ sudo chown -R hue:hue /usr/local/hue
 </ul>
 </li>
 </ul>
-<h2 id="Create_MySQL_database"><a href="#Create_MySQL_database" class="headerlink" title="Create MySQL database"></a>Create MySQL database</h2><pre><code>CREATE DATABASE hue DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+<h2 id="Create-MySQL-database"><a href="#Create-MySQL-database" class="headerlink" title="Create MySQL database"></a>Create MySQL database</h2><pre><code>CREATE DATABASE hue DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos;;
 </code></pre><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
 <li><a href="http://gethue.com/hadoop-hue-3-on-hdp-installation-tutorial" target="_blank" rel="external">Hue 3 on HDP installation tutorial</a></li>
@@ -106,26 +113,31 @@ grant all on hue.* to &apos;hue&apos;@&apos;%&apos; identified by &apos;hue&apos
 <li><a href="https://www.cloudera.com/content/www/zh-CN/documentation/enterprise/5-3-x/topics/introduction.html" target="_blank" rel="external">中文版</a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><]]>
+    
+      &lt;h2 id=&quot;Prepare-dependencies&quot;&gt;&lt;a href=&quot;#Prepare-dependencies&quot; class=&quot;headerlink&quot; title=&quot;Prepare dependencies&quot;&gt;&lt;/a&gt;Prepare dependencies&lt;/h2&gt;&lt;
+    
     </summary>
+    
     
       <category term="hue" scheme="http://zhangke.pub/tags/hue/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[impala-installation]]></title>
+    <title>impala-installation</title>
     <link href="http://zhangke.pub/2016/12/03/impala-installation/"/>
     <id>http://zhangke.pub/2016/12/03/impala-installation/</id>
     <published>2016-12-03T02:11:01.000Z</published>
     <updated>2016-12-03T02:26:20.000Z</updated>
+    
     <content type="html"><![CDATA[<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><ul>
 <li>CentOS 6.8</li>
 <li>Impala 2.7.0</li>
 <li>HDP 2.5.0</li>
 </ul>
-<h2 id="Prepare_dependencies"><a href="#Prepare_dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><h3 id="rpm"><a 5="" 6="" href="#rpm" class="headerlink" title="<a href=" https:="" archive.cloudera.com="" cdh5="" redhat="" x86_64="" cdh="" rpms="" x86_64"="">rpm</a>"><a href="https://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/5/RPMS/x86_64" target="_blank" rel="external">rpm</a></h3><ul>
+<h2 id="Prepare-dependencies"><a href="#Prepare-dependencies" class="headerlink" title="Prepare dependencies"></a>Prepare dependencies</h2><h3 id="rpm"><a href="#rpm" class="headerlink" title="rpm"></a><a href="https://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/5/RPMS/x86_64" target="_blank" rel="external">rpm</a></h3><ul>
 <li>impala-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
 <li>impala-catalog-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
 <li>impala-server-2.7.0+cdh5.9.0+0-1.cdh5.9.0.p0.32.el6.x86_64.rpm</li>
@@ -246,23 +258,28 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
 <li><a href="https://www.cloudera.com/documentation/enterprise/latest/topics/impala_tutorial.html" target="_blank" rel="external">Impala Tutorials</a></li>
 </ul>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<h2 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h2><ul>
-<li>CentOS 6.8</li>
-<li>Impala 2.7.0</li>
-<li>HD]]>
+    
+      &lt;h2 id=&quot;Version&quot;&gt;&lt;a href=&quot;#Version&quot; class=&quot;headerlink&quot; title=&quot;Version&quot;&gt;&lt;/a&gt;Version&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;CentOS 6.8&lt;/li&gt;
+&lt;li&gt;Impala 2.7.0&lt;/li&gt;
+&lt;li&gt;HD
+    
     </summary>
+    
     
       <category term="imapala" scheme="http://zhangke.pub/tags/imapala/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[casperjs-phantomjs]]></title>
+    <title>casperjs-phantomjs</title>
     <link href="http://zhangke.pub/2016/03/13/casperjs-phantomjs/"/>
     <id>http://zhangke.pub/2016/03/13/casperjs-phantomjs/</id>
     <published>2016-03-13T12:09:58.000Z</published>
     <updated>2016-03-13T12:31:34.000Z</updated>
+    
     <content type="html"><![CDATA[<p>今天用 <a href="http://phantomjs.org" target="_blank" rel="external">phantomjs</a> 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。<br>一直听说 <a href="http://casperjs.org" target="_blank" rel="external">casperjs</a> 是基于 phantomjs (和 SlimerJS) 的封装。想想组合起来应该没什么问题。<br>试过</p>
 <ol>
 <li>直接修改成 casperjs 的方法。</li>
@@ -276,107 +293,137 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
 <p>也就是说 casper.page 就是 phantomjs 中的 page 对象。可以直接稍微修改下 phantomjs 的代码，嵌套进 casperjs。<br>理论上应该就没问题，但还是不对。WTF。</p>
 <p>从头来过。直接在terminal敲了下 casperjs。有句 <strong>using phantomjs version</strong> 版本不对。<br>剩下就是替换，或者指明使用的 phantomjs 版本了。<br>我直接删了 casperjs 目录下的 phantomjs，然后做个软链接。</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>今天用 <a href="http://phantomjs.org" target="_blank" rel="external">phantomjs</a> 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。<br>一直听说 <a href]]>
+    
+      &lt;p&gt;今天用 &lt;a href=&quot;http://phantomjs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;phantomjs&lt;/a&gt; 做点东西，测试都通过了。因为要和同事基于 casperjs 写的业务流程组合起来。&lt;br&gt;一直听说 &lt;a href
+    
     </summary>
+    
     
       <category term="casperjs phantomjs" scheme="http://zhangke.pub/tags/casperjs-phantomjs/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[my key]]></title>
+    <title>my key</title>
     <link href="http://zhangke.pub/2016/01/28/my-key/"/>
     <id>http://zhangke.pub/2016/01/28/my-key/</id>
     <published>2016-01-28T06:16:11.000Z</published>
     <updated>2016-04-25T05:44:38.000Z</updated>
+    
     <content type="html"><![CDATA[<p>—–BEGIN PGP PUBLIC KEY BLOCK—–<br>Version: GnuPG v2</p>
 <p>mQINBFcZobUBEADhEnU5fTCjYu5cFqmEk/slC7hsJ3H7GM0t4bq7BIhkv7SCGlU7<br>dG2zEuQ7PCSQaprDHvgbkfpFcCqwXAQ4Fsd7MTyQsSh+sBtUkVOn70jlAWpPvcV1<br>Jrtbn5WA35IH27tuiTD8MM7HdnTHWayam+zKqQsJoiirjB4WOhHiBFPohA6itOXi<br>Vl4a9gPrV/dI7wbQSi4WvSVuF+OG9rFsvpRe4BagnSou/hNN1W81JHw6AJr8Fwbu<br>C0RBetV+e3S1UraY13SWdk74VylswU8TnU8ByUS12k9HUzrSdfCY4kow6eM/9B/M<br>Qd1EHvzbQajUrvDys7/VFN1bsxT3FO4L1GxLbc6/3bHwdUDmASX16QQxgDoOjKMD<br>q7rjpfaC8bEl9MGr2yJ70VzojWGYOc/W1TVykchvxvlvYSbiEL67sUl9WCWnLXOp<br>Htb3l6tYuBp/Iotq5Q7rZ+9OnXI7gVUTJ7de5g65XVlnfFQhlQauakKoNllmDPrn<br>Lj09254gA54bueccTJKP9lLl5+Oln47xmtZn2Zdmgc6gwqaI2JmVqyNPOFioqWjl<br>OpS7uhYj+6y0KCIh5+HJfHJrVGgvjUXlRRC1iLp88IcUkftERyRx/IZM7v7JfWra<br>9NZJKNYg/FJtHc/5jy/I7ZfxZKCSReSjqpwDIgTkH0lpWbqmaP4yubLdzQARAQAB<br>tB5LZSBDaGV1bmcgPDVmMzU3OWQxQGdtYWlsLmNvbT6JAjkEEwEIACMFAlcZobUC<br>GwMHCwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIXgAAKCRBiDcCZn98g4HwOEACgV4az<br>705Ily+onzojOGB1FG6Bu5AZhcFoCMzJIe8LkiMb3QmVlfnE3BHtplTHNVr9Xwq7<br>2gVEduN2e6OFBOX+1ofbUMf2fui7FRG7F2ca3GTitym94V9RUWdbZnfPq715VYxa<br>FZNq4YpkQNQL8hcOKxS+GFMHI52ayF9oTq61cU9Oh8JbBAz55+qkhIEy4HlhR3VP<br>BfUeXJM4878fcARlrxCCG0DgR3RIw8ucMUV82bZtp1lnLNAIItJ4Q/ibPlu0zmrM<br>+8q0RfBlxgKOwGOKgo4QcyagvX5r9Ck5xJwYdSI6tdtjVWpEicec577V4cfuVN12<br>QqtxMJEvI2tTlSLAaRcxJl1A6MkR8td27glJJnmA5xPhE+tPdpSsZfqPBNhfOTkJ<br>2lCqtb3fg8/VwbwJTz145IS3InNaN6PowuiGnUr5bCQ08SXD82sylc/HFfPJswB+<br>u8i6OnYzvEILkhMW8Bx51NqXwPnN/R0gNeie7wxaKNwDzit3r5tjHP1yuljwNtJG<br>I357/Mq2YxXnL+s8N3uUD5CbMynYOd++9hwtuEvPMHjNfIP24rU/iHo2nafm7okA<br>LJrdhjasdq/89pcmLlyMN91NkOYkBtSY2fdV43yZHRWQe08TLccFjyN4XfzVkD0B<br>swD5bO2ySOvXHUivGbQqXq2KSk5usp7mS4pdwLkCDQRXGaG1ARAAtUlakWiea04K<br>Nt/1I5Bb+lqKNlkPFvqfQioPDe327sh+7ZmtZHHRUhYSRpTjFIczrOk7j015HHFm<br>g6JO+ZWvKkFyXOBAY9FGdbFsnMjiR27jalwopYTQ01HMP0+yy8eQl2ROTg3uBnpX<br>uKVU8nc0cLW2Qdehrj+jjvk31KUkr1W2/umvxt5/vnTccWVpzSIC/5MMZJO8m5io<br>2YCgiClN3+qYTbheW3vYjLu0eVe+cxf61sdgHiD735SHYe+XmDB23lsi4z8dE3BI<br>NFeD2t1I7iCGEhQQLy+tWHPlOXlaD/CtsByeyf/bLkRFPpzAHJxWUs0E0Gc6OUuy<br>Kp1XRG0Go97ugGEv7u5Uz37AN16+/lctNPp71AlSNj/oRQMVHFqXQIem5sKF/W5p<br>Jaq82Rl79teabFXHcFliANyQUIj0viGTgsIVI2wzlgk3QDpDPxL/jPUu2d5cDAkh<br>0qRone2/yxin71E2W6lixr3MkspaTemlP71c6wsLx9suNph/fNQQxqchyzZ+XjGX<br>lz9GTfuaUEyEieRE24hB9E8Aoz4T/QgLd9JuDG3+SLs3E/LmYYO0DOiMycQ6cgl9<br>tRPr6S2WmLQSC6QfutNMrrqI2SJ7ZDpN3JuOMEn4dA9jeM9h8oHF8G9yVuhLnbzc<br>0/kwy6ebw8BgiJoB+bOlYpmQRNTFz7kAEQEAAYkCHwQYAQgACQUCVxmhtQIbDAAK<br>CRBiDcCZn98g4NXyEADgowgEsF6ZBPc03detjodWGduDLvwWmObBeJFaPFt77QI2<br>CIuDAcvKAE/49ZPLOdorambBjjdblGvZZMEpEjAZ3Lnq+Fok98HXMpY4yPsOg/fv<br>O7NzwvSq7jayIl7dkN346O1zvQzb6Y3hQ3eBuJ3WfKL52q2ctr4gLT9VXDN2QTdy<br>mz1jIjz5TEINOkFQ0jrT2SMr4cxab9iZdx6NQ5gvhgsEOwW/TnPK0jPWxOEKYbEs<br>rg0E8ywOLBq57x44jFPEuSovCHNyNjV4FNgG6cAPdXXfgN3FR0F9qxD4bEyuCjuD<br>TAU4vDyfVBvUQX0+0n0V24I2gD5vIxthr4Jy7wOlJjB0Zxdus/TFqlPoUhPZ0Ogy<br>5BNauSOgaTAcZb/rFN9XF1vfkoJVFaSvTfas0UipJ42hAD9OaJfra5X8z5LLZvwb<br>A/r92GaxuOweohSgDnqw+n04YkHpygkj0VbndpOjoCswt8UqRZdKmx/Rdw+xl4Mg<br>PDFlAF8/O/sjyKes/5jFQ4YWMjcwL+BPC6kz0bRPpZVcsL9Cl2y0lpVqelKQ5zSj<br>phBO87A47uFFKqniCerff3RbLRIohQ7oDsR656M/eSlE9Y1Y6UZ/3KaxtTTonMSa<br>etz7ISUHaHLeQNHgm45Vr9Ee/gDDUBzerLbC9fpd6c2donR7AEQBTFF4jZZz0Q==<br>=OeTG<br>—–END PGP PUBLIC KEY BLOCK—–</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>—–BEGIN PGP PUBLIC KEY BLOCK—–<br>Version: GnuPG v2</p>
-<p>mQINBFcZobUBEADhEnU5fTCjYu5cFqmEk/slC7hsJ3H7GM0t4bq7BIhkv7SCGlU7<br>dG2zEuQ7PC]]>
+    
+      &lt;p&gt;—–BEGIN PGP PUBLIC KEY BLOCK—–&lt;br&gt;Version: GnuPG v2&lt;/p&gt;
+&lt;p&gt;mQINBFcZobUBEADhEnU5fTCjYu5cFqmEk/slC7hsJ3H7GM0t4bq7BIhkv7SCGlU7&lt;br&gt;dG2zEuQ7PC
+    
     </summary>
+    
     
   </entry>
   
   <entry>
-    <title><![CDATA[197. Rising Temperature]]></title>
+    <title>197. Rising Temperature</title>
     <link href="http://zhangke.pub/2016/01/09/197-Rising-Temperature/"/>
     <id>http://zhangke.pub/2016/01/09/197-Rising-Temperature/</id>
     <published>2016-01-09T02:44:55.000Z</published>
     <updated>2016-01-09T02:53:00.000Z</updated>
+    
     <content type="html"><![CDATA[<p><a href="https://leetcode.com/problems/rising-temperature/" target="_blank" rel="external">Question</a></p>
-<h2 id="Initalization"><a href="#Initalization" class="headerlink" title="Initalization"></a>Initalization</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table Weather if exists Weather;&#10;&#10;create table Weather (&#10;&#9;`Id` int (1) primary key auto_increment,&#10;&#9;`Date` date,&#10;&#9;`Temperature` int(3)&#10;);&#10;&#10;insert into Weather (`Date`, Temperature) values&#10;  (&#39;2015-01-01&#39;, 10),&#10;  (&#39;2015-01-02&#39;, 25),&#10;  (&#39;2015-01-03&#39;, 20),&#10;  (&#39;2015-01-04&#39;, 30);</span><br></pre></td></tr></table></figure>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Write your MySQL query statement below&#10;select today.Id&#10;from Weather yesterday join Weather today on DATE_ADD(yesterday.Date, INTERVAL 1 DAY) = today.Date&#10;where yesterday.Temperature &#60; today.Temperature;</span><br></pre></td></tr></table></figure>
+<h2 id="Initalization"><a href="#Initalization" class="headerlink" title="Initalization"></a>Initalization</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">drop table Weather if exists Weather;</div><div class="line"></div><div class="line">create table Weather (</div><div class="line">	`Id` int (1) primary key auto_increment,</div><div class="line">	`Date` date,</div><div class="line">	`Temperature` int(3)</div><div class="line">);</div><div class="line"></div><div class="line">insert into Weather (`Date`, Temperature) values</div><div class="line">  (&apos;2015-01-01&apos;, 10),</div><div class="line">  (&apos;2015-01-02&apos;, 25),</div><div class="line">  (&apos;2015-01-03&apos;, 20),</div><div class="line">  (&apos;2015-01-04&apos;, 30);</div></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Write your MySQL query statement below</div><div class="line">select today.Id</div><div class="line">from Weather yesterday join Weather today on DATE_ADD(yesterday.Date, INTERVAL 1 DAY) = today.Date</div><div class="line">where yesterday.Temperature &lt; today.Temperature;</div></pre></td></tr></table></figure>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p><a href="https://leetcode.com/problems/rising-temperature/" target="_blank" rel="external">Question</a></p>
-<h2 id="Initalization"><a hre]]>
+    
+      &lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/rising-temperature/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Question&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Initalization&quot;&gt;&lt;a hre
+    
     </summary>
+    
     
       <category term="leetcode database" scheme="http://zhangke.pub/tags/leetcode-database/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[262.trips and users]]></title>
+    <title>262.trips and users</title>
     <link href="http://zhangke.pub/2016/01/09/262-trips-and-users/"/>
     <id>http://zhangke.pub/2016/01/09/262-trips-and-users/</id>
     <published>2016-01-08T17:13:16.000Z</published>
     <updated>2016-01-09T02:51:22.000Z</updated>
+    
     <content type="html"><![CDATA[<p><a href="https://leetcode.com/problems/trips-and-users" target="_blank" rel="external">Question</a></p>
-<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE IF EXISTS `Trips`;&#10;&#10;CREATE TABLE `Trips` (&#10;  `Id` int(3) NOT NULL AUTO_INCREMENT,&#10;  `Client_Id` int(3) DEFAULT NULL,&#10;  `Driver_Id` int(3) DEFAULT NULL,&#10;  `City_Id` int(3) DEFAULT NULL,&#10;  `Status` varchar(32) DEFAULT NULL,&#10;  `Request_at` date DEFAULT NULL,&#10;  PRIMARY KEY (`Id`)&#10;) ENGINE=InnoDB DEFAULT CHARSET=latin1;&#10;&#10;INSERT INTO `Trips` (`Id`, `Client_Id`, `Driver_Id`, `City_Id`, `Status`, `Request_at`)&#10;VALUES&#10;&#9;(1,1,11,1,&#39;completed&#39;,&#39;2013-10-01&#39;),&#10;&#9;(2,2,12,6,&#39;cancelled_by_driver&#39;,&#39;2013-10-01&#39;),&#10;&#9;(3,3,13,6,&#39;completed&#39;,&#39;2013-10-01&#39;),&#10;&#9;(4,4,10,1,&#39;cancelled_by_client&#39;,&#39;2013-10-01&#39;),&#10;&#9;(5,1,11,6,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(6,2,12,6,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(7,3,12,12,&#39;completed&#39;,&#39;2013-10-02&#39;),&#10;&#9;(8,2,10,12,&#39;completed&#39;,&#39;2013-10-03&#39;),&#10;&#9;(9,3,10,12,&#39;completed&#39;,&#39;2013-10-03&#39;),&#10;&#9;(10,4,13,12,&#39;cancelled_by_driver&#39;,&#39;2013-10-03&#39;);&#10;&#10;DROP TABLE IF EXISTS `Users`;&#10;&#10;CREATE TABLE `Users` (&#10;  `Users_Id` int(3) NOT NULL AUTO_INCREMENT,&#10;  `Banned` varchar(32) DEFAULT NULL,&#10;  `Role` varchar(32) DEFAULT NULL,&#10;  PRIMARY KEY (`Users_Id`)&#10;) ENGINE=InnoDB DEFAULT CHARSET=latin1;&#10;&#10;LOCK TABLES `users` WRITE;&#10;&#10;INSERT INTO `Users` (`Users_Id`, `Banned`, `Role`)&#10;VALUES&#10;&#9;(1,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(2,&#39;YES&#39;,&#39;client&#39;),&#10;&#9;(3,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(4,&#39;NO&#39;,&#39;client&#39;),&#10;&#9;(10,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(11,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(12,&#39;NO&#39;,&#39;driver&#39;),&#10;&#9;(13,&#39;NO&#39;,&#39;driver&#39;);</span><br></pre></td></tr></table></figure>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;# Write your MySQL query statement below&#10;select total.day as &#39;Day&#39;, ROUND(IFNULL(cancelled.count,0)/total.count, 2) &#39;Cancellation Rate&#39;&#10;from&#10;&#10;(&#10;select t.Request_at as day , count(*) as count&#10;from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id&#10;where c.Banned = &#39;No&#39; and d.Banned = &#39;No&#39; and t.status != &#39;completed&#39; and t.Request_at between &#39;2013-10-01&#39; and &#39;2013-10-03&#39;&#10;group by t.Request_at&#10;) cancelled&#10;&#10;right join&#10;&#10;(&#10;select t.Request_at as day, count(*) as count&#10; from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id&#10; where  c.Banned = &#39;No&#39; and d.Banned = &#39;No&#39; and t.Request_at between &#39;2013-10-01&#39; and &#39;2013-10-03&#39;&#10; group by t.Request_at&#10;) total&#10;&#10;on cancelled.day = total.day&#10;&#10;group by total.day;</span><br></pre></td></tr></table></figure>
+<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">DROP TABLE IF EXISTS `Trips`;</div><div class="line"></div><div class="line">CREATE TABLE `Trips` (</div><div class="line">  `Id` int(3) NOT NULL AUTO_INCREMENT,</div><div class="line">  `Client_Id` int(3) DEFAULT NULL,</div><div class="line">  `Driver_Id` int(3) DEFAULT NULL,</div><div class="line">  `City_Id` int(3) DEFAULT NULL,</div><div class="line">  `Status` varchar(32) DEFAULT NULL,</div><div class="line">  `Request_at` date DEFAULT NULL,</div><div class="line">  PRIMARY KEY (`Id`)</div><div class="line">) ENGINE=InnoDB DEFAULT CHARSET=latin1;</div><div class="line"></div><div class="line">INSERT INTO `Trips` (`Id`, `Client_Id`, `Driver_Id`, `City_Id`, `Status`, `Request_at`)</div><div class="line">VALUES</div><div class="line">	(1,1,11,1,&apos;completed&apos;,&apos;2013-10-01&apos;),</div><div class="line">	(2,2,12,6,&apos;cancelled_by_driver&apos;,&apos;2013-10-01&apos;),</div><div class="line">	(3,3,13,6,&apos;completed&apos;,&apos;2013-10-01&apos;),</div><div class="line">	(4,4,10,1,&apos;cancelled_by_client&apos;,&apos;2013-10-01&apos;),</div><div class="line">	(5,1,11,6,&apos;completed&apos;,&apos;2013-10-02&apos;),</div><div class="line">	(6,2,12,6,&apos;completed&apos;,&apos;2013-10-02&apos;),</div><div class="line">	(7,3,12,12,&apos;completed&apos;,&apos;2013-10-02&apos;),</div><div class="line">	(8,2,10,12,&apos;completed&apos;,&apos;2013-10-03&apos;),</div><div class="line">	(9,3,10,12,&apos;completed&apos;,&apos;2013-10-03&apos;),</div><div class="line">	(10,4,13,12,&apos;cancelled_by_driver&apos;,&apos;2013-10-03&apos;);</div><div class="line"></div><div class="line">DROP TABLE IF EXISTS `Users`;</div><div class="line"></div><div class="line">CREATE TABLE `Users` (</div><div class="line">  `Users_Id` int(3) NOT NULL AUTO_INCREMENT,</div><div class="line">  `Banned` varchar(32) DEFAULT NULL,</div><div class="line">  `Role` varchar(32) DEFAULT NULL,</div><div class="line">  PRIMARY KEY (`Users_Id`)</div><div class="line">) ENGINE=InnoDB DEFAULT CHARSET=latin1;</div><div class="line"></div><div class="line">LOCK TABLES `users` WRITE;</div><div class="line"></div><div class="line">INSERT INTO `Users` (`Users_Id`, `Banned`, `Role`)</div><div class="line">VALUES</div><div class="line">	(1,&apos;NO&apos;,&apos;client&apos;),</div><div class="line">	(2,&apos;YES&apos;,&apos;client&apos;),</div><div class="line">	(3,&apos;NO&apos;,&apos;client&apos;),</div><div class="line">	(4,&apos;NO&apos;,&apos;client&apos;),</div><div class="line">	(10,&apos;NO&apos;,&apos;driver&apos;),</div><div class="line">	(11,&apos;NO&apos;,&apos;driver&apos;),</div><div class="line">	(12,&apos;NO&apos;,&apos;driver&apos;),</div><div class="line">	(13,&apos;NO&apos;,&apos;driver&apos;);</div></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># Write your MySQL query statement below</div><div class="line">select total.day as &apos;Day&apos;, ROUND(IFNULL(cancelled.count,0)/total.count, 2) &apos;Cancellation Rate&apos;</div><div class="line">from</div><div class="line"></div><div class="line">(</div><div class="line">select t.Request_at as day , count(*) as count</div><div class="line">from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id</div><div class="line">where c.Banned = &apos;No&apos; and d.Banned = &apos;No&apos; and t.status != &apos;completed&apos; and t.Request_at between &apos;2013-10-01&apos; and &apos;2013-10-03&apos;</div><div class="line">group by t.Request_at</div><div class="line">) cancelled</div><div class="line"></div><div class="line">right join</div><div class="line"></div><div class="line">(</div><div class="line">select t.Request_at as day, count(*) as count</div><div class="line"> from Trips t join Users c on t.Client_Id = c.Users_Id join Users d on t.Driver_Id = d.Users_Id</div><div class="line"> where  c.Banned = &apos;No&apos; and d.Banned = &apos;No&apos; and t.Request_at between &apos;2013-10-01&apos; and &apos;2013-10-03&apos;</div><div class="line"> group by t.Request_at</div><div class="line">) total</div><div class="line"></div><div class="line">on cancelled.day = total.day</div><div class="line"></div><div class="line">group by total.day;</div></pre></td></tr></table></figure>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p><a href="https://leetcode.com/problems/trips-and-users" target="_blank" rel="external">Question</a></p>
-<h2 id="Initialization"><a href="]]>
+    
+      &lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/trips-and-users&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Question&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Initialization&quot;&gt;&lt;a href=&quot;
+    
     </summary>
+    
     
       <category term="leetcode database" scheme="http://zhangke.pub/tags/leetcode-database/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[nginx cache]]></title>
+    <title>nginx cache</title>
     <link href="http://zhangke.pub/2015/12/23/nginx-cache/"/>
     <id>http://zhangke.pub/2015/12/23/nginx-cache/</id>
     <published>2015-12-23T15:02:15.000Z</published>
     <updated>2015-12-23T16:17:31.000Z</updated>
+    
     <content type="html"><![CDATA[<p>刚开始做网站的时候总想禁用缓存，每次系统更新，用户那边总是会有延迟，老让用户重启微信或者强刷浏览器体验太差了，后来用上了 gulp，缓存这个问题算是解决了。<br>我们网站以图片展示为主，页面显示效果不好，图片乱序加载，耗时长。先是引入了懒加载，能尽可能将当前的图片显示出来，但是图片加载时间还是没减少。该怎样减少加载时间？CDN，或者直接加带宽，这都不被成本给限制了。那这个图片是不是该缓存下来，至少第二次访问能体验能好很多，这个图片本来就是用户上传的，固定的，每个链接就唯一的图，它是不会变的，本来就该本缓存起来。<br>于是看人家是怎么实现的，都是用 http header 如 Last-Modified, ETag 控制的 </p>
 <p>location ~ .* {<br>    if ($request_uri ~ ^/imgres) {<br>        expires max;<br>    }<br>    proxy_pass <a href="http://wetime" target="_blank" rel="external">http://wetime</a>;<br>    proxy_set_header X-Real-IP $remote_addr;<br>}</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>刚开始做网站的时候总想禁用缓存，每次系统更新，用户那边总是会有延迟，老让用户重启微信或者强刷浏览器体验太差了，后来用上了 gulp，缓存这个问题算是解决了。<br>我们网站以图片展示为主，页面显示效果不好，图片乱序加载，耗时长。先是引入了懒加载，能尽可能将当前的图片显示出来]]>
+    
+      &lt;p&gt;刚开始做网站的时候总想禁用缓存，每次系统更新，用户那边总是会有延迟，老让用户重启微信或者强刷浏览器体验太差了，后来用上了 gulp，缓存这个问题算是解决了。&lt;br&gt;我们网站以图片展示为主，页面显示效果不好，图片乱序加载，耗时长。先是引入了懒加载，能尽可能将当前的图片显示出来
+    
     </summary>
+    
     
       <category term="nginx cache" scheme="http://zhangke.pub/tags/nginx-cache/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[yum install iftop ]]></title>
+    <title>yum install iftop </title>
     <link href="http://zhangke.pub/2015/12/23/yum-install-iftop/"/>
     <id>http://zhangke.pub/2015/12/23/yum-install-iftop/</id>
     <published>2015-12-22T17:30:01.000Z</published>
     <updated>2015-12-22T17:48:02.000Z</updated>
+    
     <content type="html"><![CDATA[<p>最近搞了个萌宝投票活动，网站流量较大，也不知道该加多少带宽。<br>提了个工单，说是看<a href="https://help.aliyun.com/knowledge_detail/6571620.html?spm=5176.7618386.5.1.jlj0lN" target="_blank" rel="external">这里</a>。结果 iftop 硬是装不上，<code>No package iftop available.</code> = =!。<br>尝试下载 rpm 包，发现各种依赖。只能不停 google, 发现有个关键字 <strong>epel</strong>，突然想到以前装 tensorflow 的时候好像有这么个的东西。先跑个 <code>yum install epel-release.noarc</code>, 再来 <code>yum install iftop</code>，成功了。<br>再看看<a href="https://fedoraproject.org/wiki/EPEL" target="_blank" rel="external">资料</a>，丫的是个扩展源。。。明早起来继续监控流量。</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>最近搞了个萌宝投票活动，网站流量较大，也不知道该加多少带宽。<br>提了个工单，说是看<a href="https://help.aliyun.com/knowledge_detail/6571620.html?spm=5176.7618386.5.1.jlj0lN" ta]]>
+    
+      &lt;p&gt;最近搞了个萌宝投票活动，网站流量较大，也不知道该加多少带宽。&lt;br&gt;提了个工单，说是看&lt;a href=&quot;https://help.aliyun.com/knowledge_detail/6571620.html?spm=5176.7618386.5.1.jlj0lN&quot; ta
+    
     </summary>
+    
     
       <category term="yum iftop" scheme="http://zhangke.pub/tags/yum-iftop/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[Selenium-12306购票]]></title>
+    <title>Selenium-12306购票</title>
     <link href="http://zhangke.pub/2015/12/09/selenium-12306%E8%B4%AD%E7%A5%A8/"/>
     <id>http://zhangke.pub/2015/12/09/selenium-12306购票/</id>
     <published>2015-12-09T08:22:28.000Z</published>
     <updated>2015-12-09T11:47:52.000Z</updated>
+    
     <content type="html"><![CDATA[<p>最近看到一篇 selenium 购票的<a href="http://youerning.blog.51cto.com/10513771/1719159" target="_blank" rel="external">文章</a>，自己也在抢回家的票，于是造了一个<a href="https://github.com/5f3579d1/12306" target="_blank" rel="external">轮子</a>。以前用 java 实现了 weibo 数据的获取，这次尝试下 python 编程。</p>
 <p>期间遇到一个问题:</p>
 <blockquote>
@@ -384,33 +431,42 @@ cp sentry-provider-file-1.5.1-cdh5.9.0.jar /usr/lib/sentry/lib/sentry-provider-f
 </blockquote>
 <p>是换行符无法识别，估计是在用 sublime 编辑的时候引入，用 <code>dos2unix filename</code> 就能解决。</p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>最近看到一篇 selenium 购票的<a href="http://youerning.blog.51cto.com/10513771/1719159" target="_blank" rel="external">文章</a>，自己也在抢回家的票，于是造了一个<a hr]]>
+    
+      &lt;p&gt;最近看到一篇 selenium 购票的&lt;a href=&quot;http://youerning.blog.51cto.com/10513771/1719159&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;文章&lt;/a&gt;，自己也在抢回家的票，于是造了一个&lt;a hr
+    
     </summary>
+    
     
       <category term="selenium python" scheme="http://zhangke.pub/tags/selenium-python/"/>
     
   </entry>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
+    <title>Hello World</title>
     <link href="http://zhangke.pub/2015/12/09/hello-world/"/>
     <id>http://zhangke.pub/2015/12/09/hello-world/</id>
     <published>2015-12-09T08:13:15.000Z</published>
     <updated>2015-12-09T08:13:15.000Z</updated>
+    
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
+    
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io
+    
     </summary>
+    
     
   </entry>
   
